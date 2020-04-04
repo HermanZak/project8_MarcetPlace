@@ -135,6 +135,7 @@
 .serch {
     min-height: 724px;
     position: relative;
+    margin-bottom: 186px;
 }
 
 .serch__inner {
@@ -228,6 +229,7 @@
     margin-left: 41px;
     margin-top: 40px;
 
+
     form {
         display: flex;
 
@@ -292,10 +294,53 @@
 
 // __________________________________END_SERCH__________________________________________________________
 
-// __________________________________START_PRODUCTS__________________________________________________________
+// __________________________________START_LEYER__________________________________________________________
 
+.leyers__inner {
+    display: flex;
+    justify-content: space-between;
 
+    .leyers__item {
+        max-width: 365px;
+        width: 100%;
+        text-align: center;
+        min-height: 404px;
 
+        &:hover {
+            box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.08);
+        }
 
+        &-center {
+            box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.08);
+        }
 
-// __________________________________END_PRODUCTS__________________________________________________________
+        &-img {
+            padding-top: 40px;
+
+            img {
+                width: 112px;
+                height: 112px;
+            }
+        }
+
+        &-title {
+            padding-top: 20px;
+            font-size: 24px;
+            line-height: 30px;
+            color: #000;
+        }
+
+        &-text {
+            padding-top: 15px;
+            width: 300px;
+            font-size: 16px;
+            color: $text;
+            margin: 0 auto;
+            line-height: 30px;
+
+        }
+
+    }
+}
+
+// __________________________________END_LEYER__________________________________________________________
