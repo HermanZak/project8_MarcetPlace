@@ -9,7 +9,7 @@ html {
 }
 
 a {
-    color: $text;
+    color: $a;
     display: inline-block;
     text-decoration: none;
 }
@@ -23,14 +23,23 @@ li {
 }
 
 
-// body {
-//     font-family: 'Roboto-Regular', sans-serif;
-//     font-size: 15px;
-//     font-weight: 400;
-//     line-height: 24px;
-//     color: $text;
-// }
+body {
+    // font-family: 'Quicksand-Regular', sans-serif;
+    font-family: "Quicksand-Light", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
 
-// .container {}
+}
 
-// .container-fluid {}
+.container {
+    max-width: 1170px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.container-fluid {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
+}
