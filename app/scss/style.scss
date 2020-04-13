@@ -348,7 +348,7 @@
 
 // __________________________________END_LEYER__________________________________________________________
 
-// __________________________________START_FEATURED PRODUCTS__________________________________________________________
+// __________________________________START_FEATURED_PRODUCTS__________________________________________________________
 
 .featured_products {
     background-color: #eff1f5;
@@ -356,22 +356,21 @@
     padding-bottom: 120px;
 }
 
+.title-box {
+    @include title-box;
+
+}
+
+.title {
+    @include title;
+}
+
 .featured_products__title-box {
     position: relative;
-    background-color: #fff;
-    width: 100%;
-    padding: 0px 28px 22px;
-    box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
-    border-radius: 4px;
-    margin-bottom: 48px;
     display: flex;
     justify-content: space-between;
 
-    .featured_products__title {
-        font-size: 30px;
-        line-height: 35px;
-        @include f400;
-    }
+
 
     &-arrows {
         margin-top: 33px;
@@ -386,12 +385,12 @@
 
 .slick-arrow {
     position: absolute;
-    top: -143px;
+    top: -138px;
     width: 20px;
     background-color: transparent;
     border: none;
     cursor: pointer;
-    opacity: .6;
+    opacity: .8;
 }
 
 .slick-arrow:hover,
@@ -401,12 +400,12 @@
 }
 
 .slick-prev {
-    right: 100px;
+    right: 105px;
     left: auto;
 }
 
 .slick-next {
-    right: 51px;
+    right: 56px;
 }
 
 .slick-arrow::before {
@@ -427,7 +426,7 @@
     margin-left: 50px;
 }
 
-.featured_products__title {
+.featured_products__inner__box__title {
     font-size: 24px;
     line-height: 30px;
     @include f600;
@@ -436,28 +435,25 @@
 
 }
 
-.featured_products__title-autor {
+.featured_products__title-autor__inner {
     display: flex;
-    align-items: center;
-    min-width: 245px;
+    min-height: 50px;
+
+}
+
+.featured_products__title__autor-category {
+    position: relative;
+    @include category;
+    padding-left: 45px;
+    @include category-icon;
+}
+
+.featured_products__title-autor {
+    @include autor;
     padding-bottom: 25px;
 
-    span {
-        padding-left: 45px;
-    }
-
 }
 
-.featured_products__title-avatar {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-position: cemter;
-    display: inline-block;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-right: 14px;
-}
 
 .featured_products__text {
     font-size: 16px;
@@ -467,6 +463,16 @@
     padding-bottom: 40px;
 }
 
+.fpp {
+    background-color: rgb(241, 243, 246);
+    border-radius: 16px;
+    padding: 0px 15px 0px 16px;
+    line-height: 30px;
+
+    a {
+        color: #868c96;
+    }
+}
 
 
 .featured_products__products {
@@ -476,16 +482,6 @@
         margin-left: 7px;
     }
 
-    .fpp {
-        background-color: rgb(241, 243, 246);
-        border-radius: 16px;
-        padding: 0px 15px 0px 18px;
-        line-height: 30px;
-
-        a {
-            color: #868c96;
-        }
-    }
 }
 
 .featured_products__info {
@@ -496,13 +492,15 @@
     align-items: center;
     min-height: 80px;
 
+
     &-box {
         display: flex;
+        max-width: 386px;
+        width: 100%;
+        min-height: 80px;
+        align-items: center;
     }
 
-    div+div {
-        margin-left: 45px;
-    }
 
     &-prise {
         background-color: $blue;
@@ -511,14 +509,25 @@
         padding: 4px 19px;
         font-size: 15px;
         @include f500;
+
+
     }
 
     &-like {
-        color: #7347c1;
+        position: relative;
+        color: $pink;
+        padding-right: 45px;
+        padding-left: 45px;
+
+
+        @include like-icon;
     }
 
     &-bey {
+        position: relative;
         color: $blue;
+
+        @include bey-icon;
     }
 
 
@@ -533,4 +542,212 @@
 
 
 
-// __________________________________END_FEATURED PRODUCTS__________________________________________________________
+
+// __________________________________END_FEATURED_PRODUCTS__________________________________________________________
+
+// __________________________________START_NEW_PRODUCTS__________________________________________________________
+
+.new-products {
+    padding-top: 120px;
+    background-color: #f6f7fb;
+}
+
+.new-products__title-box {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+
+    &-arrows {
+        position: relative;
+        display: block;
+        padding-top: 40px;
+
+
+
+        &::before {
+            position: absolute;
+            content: '';
+            background-image: url(../images/new_products/menu.svg);
+            width: 5px;
+            height: 20px;
+            top: 42px;
+            right: 10px;
+            cursor: pointer;
+        }
+
+
+        a {
+            color: $text;
+            padding-right: 30px;
+        }
+    }
+}
+
+.new-products__box-btn {
+    background-color: #fff;
+    padding: 30px 110px 30px 30px;
+    box-shadow: 0px 1px 2px 0px rgba(90, 93, 100, 0.1);
+    border-radius: 4px;
+    margin-bottom: 50px;
+
+    .new-products-btn {
+        display: flex;
+        justify-content: space-between;
+
+        button {
+            border: none;
+            color: #747b86;
+            cursor: pointer;
+            outline: none;
+            transition: all .6s;
+
+            &:hover {
+                background-color: $blue;
+                color: #fff;
+            }
+
+        }
+    }
+}
+
+.new-products__inner-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+.new-products__item {
+    background-color: #fff;
+    box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
+    max-width: 360px;
+    width: 100%;
+    border-radius: 4px;
+    min-height: 530px;
+    margin-bottom: 30px;
+
+    &-box {
+        max-width: 305px;
+        margin-left: 30px;
+    }
+
+    &-img img {
+        max-width: 360px;
+    }
+
+    &-title {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        font-size: 20px;
+        @include f600;
+        line-height: 30px;
+    }
+
+    &-text {
+        font-size: 16px;
+        color: $text;
+        line-height: 30px;
+        padding-bottom: 30px;
+    }
+
+
+    &-info-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 62px;
+        border-top: 1px solid #ececec;
+
+
+    }
+
+    &-info-prise {
+        .prise {
+            color: $blue;
+            @include f700;
+            background-color: #e6f1fd;
+            padding: 4px 17px;
+            border-radius: 12px;
+        }
+
+        .like {
+            position: relative;
+            padding-left: 35px;
+            color: $like;
+            @include like-icon;
+
+            &::before {
+                left: 13px;
+            }
+        }
+    }
+
+    &-info-bey {
+        position: relative;
+        color: $blue;
+        @include bey-icon;
+    }
+
+}
+
+.new-products__info-star {
+    display: inline-block;
+    padding-left: 10px;
+}
+
+
+.new-products__item-title__inner-autor {
+    display: flex;
+    padding-bottom: 20px;
+}
+
+.featured_products__title-autor {
+    @include autor;
+
+}
+
+.new-products__title__autor-category {
+    position: relative;
+    padding-left: 40px;
+    @include category-icon;
+}
+
+.html::before {
+    background-image: url(../images/new_products/html.png);
+    height: 17px;
+}
+
+
+
+.psd::before {
+    background-image: url(../images/new_products/psd.png);
+    width: 16px;
+    height: 16px;
+}
+
+.new-products__bottom-btn {
+    padding-top: 30px;
+    text-align: center;
+    padding-bottom: 120px;
+
+    button {
+        border: none;
+        font-size: 16px;
+        padding: 5px 30px;
+        border-radius: 25px;
+        background-color: $blue;
+        color: #fff;
+        cursor: pointer;
+        outline: none;
+    }
+}
+
+// __________________________________END_NEW_PRODUCTS__________________________________________________________
+
+
+// __________________________________START_YOUR_FOLLOWERS__________________________________________________________
+
+
+
+// __________________________________END_YOUR_FOLLOWERS__________________________________________________________

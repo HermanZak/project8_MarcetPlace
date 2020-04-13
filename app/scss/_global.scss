@@ -41,3 +41,15 @@ body {
     margin: 0 auto;
     padding: 0 30px;
 }
+
+.avatar {
+    @include avatar;
+}
+
+.autor {
+    @include autor;
+}
+
+.category {
+    @include category;
+}

@@ -2,6 +2,8 @@ $blue: #0674ec;
 $text: #555555;
 $a: #333333;
 $grey: #eef1f3;
+$pink: #7347c1;
+$like: #6f7d8d;
 
 @mixin f400 {
     font-family: 'Quicksand', sans-serif;
@@ -21,4 +23,85 @@ $grey: #eef1f3;
 @mixin f700 {
     font-family: 'Quicksand', sans-serif;
     font-weight: 700;
+}
+
+@mixin title-box {
+    background-color: #fff;
+    width: 100%;
+    padding: 0px 28px 22px;
+    box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
+    border-radius: 4px;
+    margin-bottom: 48px;
+    min-height: 110px;
+}
+
+@mixin title {
+    font-size: 30px;
+    line-height: 35px;
+    @include f400;
+    padding-top: 40px;
+}
+
+@mixin autor {
+    display: flex;
+    align-items: center;
+    @include f600;
+
+    a {
+        color: #000;
+    }
+}
+
+@mixin avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-position: cemter;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: 14px;
+}
+
+@mixin category {
+    display: inline-block;
+    padding-top: 3px;
+
+    a {
+        color: $pink;
+    }
+}
+
+@mixin category-icon {
+    &::before {
+        position: absolute;
+        content: '';
+        background-image: url(../images/featured_products/word-press.svg);
+        width: 15px;
+        height: 15px;
+        top: 6px;
+        left: 20px;
+    }
+}
+
+@mixin like-icon {
+    &::before {
+        position: absolute;
+        content: '';
+        background-image: url(../images/featured_products/lnr-heart.svg);
+        width: 20px;
+        height: 20px;
+        left: 20px;
+    }
+}
+
+@mixin bey-icon {
+    &::before {
+        position: absolute;
+        content: '';
+        background-image: url(../images/featured_products/lnr-cart.svg);
+        width: 20px;
+        height: 20px;
+        right: 30px;
+    }
 }
