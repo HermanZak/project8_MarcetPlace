@@ -105,3 +105,77 @@ $like: #6f7d8d;
         right: 30px;
     }
 }
+
+
+
+@mixin item-box {
+    &-title {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        font-size: 20px;
+        @include f600;
+        line-height: 30px;
+    }
+
+    &-inner-autor {
+        display: flex;
+        padding-bottom: 20px;
+    }
+
+    &-autor {
+        @include autor;
+    }
+
+    &-category {
+        position: relative;
+        padding-left: 40px;
+        @include category-icon;
+    }
+
+    &-text {
+        font-size: 16px;
+        color: $text;
+        line-height: 30px;
+        padding-bottom: 30px;
+    }
+
+    &-info {
+        justify-content: space-between;
+        display: flex;
+        align-items: center;
+        min-height: 62px;
+        border-top: 1px solid #ececec;
+
+        &-prise {
+            .prise {
+                color: $blue;
+                @include f700;
+                background-color: #e6f1fd;
+                padding: 4px 17px;
+                border-radius: 12px;
+            }
+
+            .like {
+                position: relative;
+                padding-left: 35px;
+                color: $like;
+                @include like-icon;
+
+                &::before {
+                    left: 13px;
+                }
+            }
+        }
+
+        &-star {
+            display: inline-block;
+            padding-right: 55px;
+        }
+
+        &-bey {
+            position: relative;
+            color: $blue;
+            @include bey-icon;
+        }
+    }
+}
