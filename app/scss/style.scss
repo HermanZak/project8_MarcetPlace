@@ -323,6 +323,10 @@
             img {
                 width: 112px;
                 height: 112px;
+                background-repeat: no-repeat;
+                display: block;
+                background-position: center;
+                background-size: cover;
             }
         }
 
@@ -626,6 +630,10 @@
 }
 
 .new-products__item-img {
+    background-repeat: no-repeat;
+    display: block;
+    background-position: center;
+    background-size: cover;
     position: relative;
     display: inline-block;
 
@@ -637,6 +645,10 @@
     .img-a {
         display: block;
         max-height: 230px;
+        background-repeat: no-repeat;
+        display: block;
+        background-position: center;
+        background-size: cover;
     }
 
 
@@ -644,6 +656,10 @@
     img {
         display: block;
         max-width: 360px;
+        background-repeat: no-repeat;
+        display: block;
+        background-position: center;
+        background-size: cover;
 
     }
 
@@ -918,9 +934,79 @@
         }
 
     }
+}
 
+// __________________________________END_CHOOSE__________________________________________________________
+
+// __________________________________START_SHOPPING__________________________________________________________
+
+.container-fluid {
+    padding: 0;
+}
+
+.shopping__inner {
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.shopping__items {
+    text-align: center;
+    color: #fff;
+
+
+
+    &-img-bg {
+        width: 960px;
+        height: 560px;
+        background-repeat: no-repeat;
+        display: block;
+        background-position: center;
+        background-size: cover;
+
+
+    }
+
+    &-img-icon {
+        padding-top: 100px;
+        display: block;
+        margin: 0 auto;
+        width: 120px;
+        height: 100px;
+    }
+
+    .buy {
+        width: 100px;
+        height: 100px;
+    }
+
+    &-title {
+        padding-top: 140px;
+        font-size: 36px;
+        line-height: 40px;
+    }
+
+    &-text {
+        margin: 0 auto;
+        margin-top: 20px;
+        width: 600px;
+        font-size: 16px;
+        line-height: 30px;
+    }
+
+    &-btn {
+        margin-top: 40px;
+
+        a {
+            padding: 16px 27px;
+            background-color: #fff;
+            font-size: 16px;
+            color: $blue;
+            border-radius: 27px;
+
+        }
+    }
 
 }
 
-
-// __________________________________END_CHOOSE__________________________________________________________
+// __________________________________END_SHOPPING__________________________________________________________
