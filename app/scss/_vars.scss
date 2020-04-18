@@ -11,7 +11,7 @@ $like: #6f7d8d;
 }
 
 @mixin f500 {
-    font-family: 'Quicksand', sans-serif;
+    font-family: "Quicksand-Medium", sans-serif;
     font-weight: 500;
 }
 
@@ -94,6 +94,20 @@ $like: #6f7d8d;
         left: 20px;
     }
 }
+
+@mixin comments-icon {
+    &::before {
+        position: absolute;
+        content: '';
+        background-image: url(../images/lates-new/buble.svg);
+        width: 20px;
+        height: 20px;
+        top: 2px;
+        left: 30px;
+    }
+}
+
+
 
 @mixin bey-icon {
     &::before {
