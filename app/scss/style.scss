@@ -141,9 +141,10 @@
         background-color: transparent;
         right: 0;
         top: 0;
-        padding: 15px 27px 10px 27px;
+        padding: 13px 27px 13px 27px;
         background-color: $blue;
         border-radius: 20px;
+        color: #fff;
         cursor: pointer;
 
         &:focus {
@@ -2598,10 +2599,11 @@
 .items-page__content {
     &__inner {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
         flex-wrap: wrap;
         min-width: 845px;
         min-height: 210px;
+        margin-left: -30px;
     }
 
 
@@ -2614,6 +2616,9 @@
         box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
         margin-bottom: 30px;
         transition: all .5s;
+        max-width: 100%;
+        flex-basis: calc(33.333% - 30px);
+        margin-left: 30px;
 
         .item-page-bg1 {
             height: 166px;
@@ -2933,6 +2938,8 @@
         font-size: 30px;
         line-height: 35px;
         @include f500;
+        width: 1170px;
+        overflow-x: hidden;
     }
 }
 
@@ -3907,6 +3914,7 @@
         align-items: center;
         height: 550px;
         width: 1170px;
+        padding: 0 30px;
         margin: 0 auto;
 
 
