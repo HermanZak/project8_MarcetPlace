@@ -5,8 +5,13 @@ $grey: #eef1f3;
 $pink: #7347c1;
 $like: #6f7d8d;
 
+@mixin f300 {
+    font-family: "Quicksand-Light", sans-serif;
+    font-weight: 300;
+}
+
 @mixin f400 {
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand-Regular', sans-serif;
     font-weight: 400;
 }
 
