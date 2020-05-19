@@ -9,9 +9,14 @@ html {
 }
 
 a {
-    color: $text;
+    color: $a;
     display: inline-block;
     text-decoration: none;
+}
+
+html,
+body {
+    height: 100%;
 }
 
 ul,
@@ -23,14 +28,86 @@ li {
 }
 
 
-// body {
-//     font-family: 'Roboto-Regular', sans-serif;
-//     font-size: 15px;
-//     font-weight: 400;
-//     line-height: 24px;
-//     color: $text;
-// }
+body {
+    @include f500;
+    font-size: 15px;
+    line-height: 24px;
+    // overflow-x: hidden;
+    background-color: #eff1f5;
+}
 
-// .container {}
 
-// .container-fluid {}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex: 0 0 auto;
+}
+
+.container {
+    max-width: 1170px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.container-fluid {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.avatar {
+    @include avatar;
+}
+
+.autor {
+    @include autor;
+}
+
+.category {
+    @include category;
+}
+
+.breadcrumbs {
+    &__list {
+
+
+        li {
+            position: relative;
+
+            &+li {
+                margin-left: 20px;
+
+                &::before {
+                    position: absolute;
+                    content: '/';
+                    color: #fff;
+                    left: -15px;
+                }
+            }
+
+            a,
+            span {
+                color: #ffffff;
+            }
+
+            &:last-child {
+
+                a,
+                span {
+                    color: #bfcad7;
+                    ;
+                }
+            }
+
+        }
+    }
+
+}

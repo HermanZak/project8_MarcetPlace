@@ -1,0 +1,200 @@
+$blue: #0674ec;
+$text: #555555;
+$a: #333333;
+$grey: #eef1f3;
+$pink: #7347c1;
+$like: #6f7d8d;
+
+@mixin f300 {
+    font-family: "Quicksand-Light", sans-serif;
+    font-weight: 300;
+}
+
+@mixin f400 {
+    font-family: 'Quicksand-Regular', sans-serif;
+    font-weight: 400;
+}
+
+@mixin f500 {
+    font-family: "Quicksand-Medium", sans-serif;
+    font-weight: 500;
+}
+
+@mixin f600 {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+}
+
+@mixin f700 {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+}
+
+@mixin title-box {
+    background-color: #fff;
+    width: 100%;
+    padding: 0px 28px 22px;
+    box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
+    border-radius: 4px;
+    margin-bottom: 48px;
+    min-height: 110px;
+}
+
+@mixin title {
+    font-size: 30px;
+    line-height: 35px;
+    @include f400;
+    padding-top: 40px;
+}
+
+@mixin autor {
+    display: flex;
+    align-items: center;
+    @include f600;
+
+    a {
+        color: #000;
+    }
+}
+
+@mixin avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-position: cemter;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: 14px;
+}
+
+@mixin category {
+    display: inline-block;
+    padding-top: 3px;
+
+    a {
+        color: $pink;
+    }
+}
+
+@mixin category-icon {
+    &::before {
+        position: absolute;
+        content: '';
+        background-image: url(../images/featured_products/word-press.svg);
+        width: 15px;
+        height: 15px;
+        top: 6px;
+        left: 20px;
+    }
+}
+
+@mixin like-icon {
+    &::before {
+        position: absolute;
+        content: '';
+        background-image: url(../images/featured_products/lnr-heart.svg);
+        width: 20px;
+        height: 20px;
+        left: 20px;
+    }
+}
+
+@mixin comments-icon {
+    &::before {
+        position: absolute;
+        content: '';
+        background-image: url(../images/lates-new/buble.svg);
+        width: 20px;
+        height: 20px;
+        top: 2px;
+        left: 30px;
+    }
+}
+
+
+
+@mixin bey-icon {
+    &::before {
+        position: absolute;
+        content: '';
+        background-image: url(../images/featured_products/lnr-cart.svg);
+        width: 20px;
+        height: 20px;
+        right: 30px;
+    }
+}
+
+
+
+@mixin item-box {
+    &-title {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        font-size: 20px;
+        @include f600;
+        line-height: 30px;
+    }
+
+    &-inner-autor {
+        display: flex;
+        padding-bottom: 20px;
+    }
+
+    &-autor {
+        @include autor;
+    }
+
+    &-category {
+        position: relative;
+        padding-left: 40px;
+        @include category-icon;
+    }
+
+    &-text {
+        font-size: 16px;
+        color: $text;
+        line-height: 30px;
+        padding-bottom: 30px;
+    }
+
+    &-info {
+        justify-content: space-between;
+        display: flex;
+        align-items: center;
+        min-height: 62px;
+        border-top: 1px solid #ececec;
+
+        &-prise {
+            .prise {
+                color: $blue;
+                @include f700;
+                background-color: #e6f1fd;
+                padding: 4px 17px;
+                border-radius: 12px;
+            }
+
+            .like {
+                position: relative;
+                padding-left: 35px;
+                color: $like;
+                @include like-icon;
+
+                &::before {
+                    left: 13px;
+                }
+            }
+        }
+
+        &-star {
+            display: inline-block;
+            padding-right: 55px;
+        }
+
+        &-bey {
+            position: relative;
+            color: $blue;
+            @include bey-icon;
+        }
+    }
+}
